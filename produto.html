@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+       .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: background-color 0.5s ease; /* Definindo a transição de cor de fundo */
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&family=Raleway:wght@300&display=swap');
+        
+
+:root{
+  --primaria: #a4916d;
+  --black: #000;
+  --white: #fff;
+  --light-black: #666;
+  --hover: rgba(244, 244, 244, 0.8);
+  --bg: var(--white);
+  --border:0.1rem solid rgba(0, 0, 0, 0.3);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+*{
+  font-family: 'poppins', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+  background: var(--primaria);
+  border-radius: 5rem;
+}
+section{
+  padding: 5rem 7%;
+}
+.btn{
+display: inline-block;
+margin-top: 1rem;
+padding: .9rem 3rem;
+border-radius: 10rem;
+border: .1rem solid var(--primaria);
+cursor: pointer;
+color: #a4916d;
+font-size: 1.7rem;
+
+}
+
+.btn:hover{
+background: var(--primaria);
+color: var(--white);
+}
+
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+.header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color:var(--black)
+}
+.headerb .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+.header .logo i{
+  color: var(--primaria);
+  padding-right: .5rem;
+
+}
+
+.header .navbar a{
+  font-size: 1.7rem;
+  color: var(--black);
+  margin: 0 1rem;
+}
+.header .navbar a:hover{
+  color: var(--primaria);
+}
+
+.header .icons div{
+  font-size: 2.5rem;
+  margin-left: 1.7rem;
+  color: var(--white);
+  cursor: pointer;
+  -webkit-text-stroke: .1rem var(--primaria);
+}
+.header .icons div:hover{
+  color: var(--primaria);
+}
+#menu-bar{
+  display: none;
+}
+#slideshow {
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    #slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 1s ease-in-out;}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-bag-shopping"></i>Millenium</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#produtos">produto</a>
+            <a href="contatos">contato</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search"></div>
+            <div class="fas fa-shopping-cart"></div>
+            <div class="fas fa-heart"></div>
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+        </div>
+      </header>
+        
+        <div id="slideshow">
+          <img src="blu (1) (1) (1) (2).jpg" alt="Imagem 1">
+          <img src="" alt="Imagem 2">
+          <img src="luis lo.jpg" alt="Imagem 3">
+        </div>
+        <script>
+          const images = document.querySelectorAll("#slideshow img");
+          let currentIndex = 0;
+      
+          function nextImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.opacity = 1;
+          }
+      
+          function startSlideshow() {
+            setInterval(nextImage, 1000); // Mude a cada 3 segundos
+          }
+      
+          // Comece o slideshow quando a página carregar
+          window.addEventListener("load", startSlideshow);
+        </script>
+
+    
+</body>
+</html>
